@@ -19,6 +19,9 @@ class EmployeeController extends Controller
             $employee = new Employee();
             $employee = $employee->find($inputemp);
         }
+
+        var_dump($employee);
+        exit;
         return response()->json(['status'=>'OK', 'data'=>$employee]);
     }
 
