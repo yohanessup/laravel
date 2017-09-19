@@ -16,9 +16,7 @@ class EmployeesController extends Controller
     public function index()
     {
         $employee = new Employee();
-        $dataEmp = $employee::all();
-
-        $data = $dataEmp->toArray();
+        $data = $employee::all();
 
         return view('employee', ['data' => $data]);
     }
